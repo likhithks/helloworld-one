@@ -3,8 +3,13 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''export name=likhith
-echo $name'''
+        sh 'export name=likhith'
+      }
+    }
+
+    stage('read_var') {
+      steps {
+        sh 'echo $name'
       }
     }
 
