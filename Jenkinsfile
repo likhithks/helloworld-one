@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         sh "export name=likhith"
-        sh "echo $name + \"shenoy\""
+        sh "echo $name"
       }
     }
 
