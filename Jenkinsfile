@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'export name=likhith'
+        sh '''export name=likhith
+echo $name "shenoy"'''
       }
     }
 
