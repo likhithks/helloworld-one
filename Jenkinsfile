@@ -9,7 +9,7 @@ pipeline {
 
     stage('read_var') {
       steps {
-        sh 'echo $name'
+        sh 'echo $name "shenoy"'
       }
     }
 
