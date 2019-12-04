@@ -1,18 +1,12 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh '''export name=likhith
-echo $name "shenoy"'''
-      }
-    }
-
-    stage('read_var') {
-      steps {
-        sh 'echo $name "shenoy"'
-      }
-    }
-
-  }
+    agent none 
+    stages {
+        stage('Example Build') {
+            agent { docker 'maven:3-alpine' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+	}
 }
